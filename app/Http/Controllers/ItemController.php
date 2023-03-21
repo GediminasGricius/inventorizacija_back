@@ -12,7 +12,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items=Item::with('user')->get();
+        $items=Item::with('user')->orderBy('no')->get();
         /*
         foreach ($items as $item){
             if ($item->user != null){
